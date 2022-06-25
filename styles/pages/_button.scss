@@ -1,0 +1,44 @@
+@use "./base";
+@use "./varaibles" as *;
+@use "./mixins";
+
+.button {
+  width: 211px;
+  height: 56px;
+  padding: 18px 30px;
+  border-radius: 12px;
+  border: 1px solid $colorActReg;
+  @include mixins.fontStyle(16px, 700, 20px, 0em);
+  font-family: $font;
+  text-align: center;
+  background: $colorActReg;
+  color: $colorW;
+  margin: 30px 0;
+
+  &__double {
+    background: $colorSepar;
+    border: 1px solid $colorSepar;
+    position: relative;
+    width: 233px;
+    height: 42px;
+    padding-right: 32px;
+    margin-left: auto;
+    :hover {
+      background: $colorW;
+    }
+  }
+  &__double-news {
+    outline: 2px solid $colorSepar;
+    background: $colorSepar;
+    color: $colorMainReg;
+    width: 105px;
+    height: 38px;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    :hover {
+      background: $colorW;
+    }
+  }
+}

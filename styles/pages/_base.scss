@@ -1,0 +1,22 @@
+@use "./varaibles" as *;
+@use "./mixins";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+.body {
+  font-family: $font;
+}
+a {
+  text-decoration: none;
+  font-family: $font;
+}
+p {
+  font-family: $font;
+}

@@ -1,0 +1,50 @@
+@use "./base";
+@use "./varaibles" as *;
+@use "./mixins";
+
+.footer {
+  background: $colorGrey;
+  &__container {
+    min-height: 139px;
+    max-width: 1440px;
+    margin: 0 auto;
+    &__wrapper {
+      padding: 30px 60px;
+      border-top: 2px solid $colorSepar;
+    }
+  }
+  &__adress {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 21px;
+    column-gap: 10px;
+  }
+  &__adress-last {
+    color: $colorMainReg;
+  }
+  &__logo {
+    @include mixins.fontStyle(16px, 400, 20px, 0px);
+    text-align: right;
+    color: $colorGreyText;
+  }
+  &__logo-last {
+    margin-left: auto;
+    // align-self: flex-end;
+  }
+  &__phone {
+    color: $colorMainAlt;
+  }
+  &__contact {
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    // // flex-direction: column;
+    margin-top: 0px;
+  }
+}
+.mail {
+  @include mixins.fontStyle(16px, 700, 20px, 0em);
+  text-align: left;
+  color: $colorActReg;
+}

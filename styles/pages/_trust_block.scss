@@ -1,0 +1,44 @@
+@use "./varaibles" as *;
+@use "./mixins";
+.trust {
+  background: none;
+  &__container {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  &__wrapper {
+    background: none;
+  }
+  &__title-main {
+    @include mixins.fontStyle(14px, 700, 17px, 1px);
+    text-align: center;
+    color: $colorMainReg;
+    margin-bottom: 30px;
+    font-family: $font;
+  }
+  &__pazzle {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+  }
+  &__section {
+    width: 100%;
+    height: 100%;
+  }
+  &__logo {
+    display: block;
+    // min-height: 100%;
+    height: 120px;
+    // position: relative;
+  }
+  &__logo-img {
+    max-width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    // bottom: 0;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // position: absolute;
+  }
+}

@@ -1,0 +1,64 @@
+@use "./varaibles" as *;
+@use "./mixins";
+
+.team {
+  background: none;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  &__container-two {
+    padding: 60px;
+    margin: 60px auto;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: $colorGrey;
+    margin-bottom: 30px;
+    // border-bottom-left-radius: 12px;
+    // border-top-left-radius: 12px;
+  }
+  &__card-img {
+    max-width: 50%;
+    min-width: none;
+    min-height: 344px;
+    object-fit: cover;
+  }
+  &__card-image {
+    width: 100%;
+    min-height: 344px;
+    min-width: 400px;
+  }
+  &__person {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 5px;
+    padding-left: 30px;
+    font-family: $font;
+  }
+  &__staff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px;
+    margin-top: 30px;
+  }
+  &__name {
+    @include mixins.fontStyle(16px, 700, 20px, 0em);
+    text-align: left;
+    color: $colorGreyText;
+  }
+  &__position {
+    @include mixins.fontStyle(14px, 400, 22px, 0em);
+    text-align: left;
+    color: $colorGreyText;
+  }
+}

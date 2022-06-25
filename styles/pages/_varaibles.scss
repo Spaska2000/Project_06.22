@@ -1,0 +1,36 @@
+$font: "Montserrat", sans-serif;
+
+$colorW: #ffffff;
+$colorMainReg: #323264;
+$colorMainAlt: #46466e;
+$colorMainSoft: #686887;
+$colorAccent: #f0145a;
+$colorActReg: #24a3ff;
+$colorHover: #0085ff;
+$colorActiv: #006ccf;
+$colorGrey: #f5f5fa;
+$colorGreyText: #b3b3ba;
+$colorGrAlt: #ededf7;
+$colorSepar: #e6e6f0;
+
+$colorGradReg: linear-gradient(
+  128.63deg,
+  #323264 0%,
+  #323264 73.96%,
+  #a54b5f 100%
+);
+
+$colorGradSoft: linear-gradient(
+  42.01deg,
+  #323264 14.33%,
+  #323264 51.39%,
+  #7a425e 87.53%
+);
+$colorGradRed: linear-gradient(323.35deg, #f0145a 6.7%, #693264 70.36%);
+$colorGradSuper: linear-gradient(
+  228.57deg,
+  #323264 11.93%,
+  #323264 57.17%,
+  #643e72 87.46%
+);
+$colorGradText: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);

@@ -1,0 +1,60 @@
+@use "./base";
+@use "./varaibles" as *;
+@use "./mixins";
+
+.header {
+  background: $colorMainReg;
+
+  &__container {
+    min-height: 144px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    &__wrapper {
+      padding: 50px 60px 0 60px;
+      color: $colorW;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+}
+.heder-main {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.none {
+  display: none;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 18px;
+
+  &__row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    align-self: flex-end;
+    gap: 6px;
+  }
+  &__row2 {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+  }
+}
+.page__link {
+  @include mixins.fontStyle(16px, 700, 20px, 0em);
+  text-align: right;
+  color: $colorW;
+}
