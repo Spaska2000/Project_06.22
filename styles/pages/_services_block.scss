@@ -1,31 +1,6 @@
 @use "./varaibles" as *;
 @use "./mixins";
 .services {
-  // ::after {
-  //   .services__shadow__container {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     // max-width: 100%;
-  //     // margin: 0 auto;
-
-  //     margin-bottom: -40px;
-  //   }
-  //   .shadow-big {
-  //     background: #cacadb;
-  //     border-bottom-left-radius: 12px;
-  //     border-bottom-right-radius: 12px;
-  //     height: 10px;
-  //     width: 1400px;
-  //   }
-
-  //   .shadow-small {
-  //     width: 1360px;
-  //     background: #e7e7f2;
-  //   }
-  // }
-
   &__container {
     min-height: 100%;
     max-width: 1440px;
@@ -75,25 +50,3 @@
     // font-family: $font;
   }
 }
-// .services__shadow__container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   // max-width: 100%;
-//   // margin: 0 auto;
-
-//   margin-bottom: -40px;
-// }
-// .shadow-big {
-//   background: #cacadb;
-//   border-bottom-left-radius: 12px;
-//   border-bottom-right-radius: 12px;
-//   height: 10px;
-//   width: 1400px;
-// }
-
-// .shadow-small {
-//   width: 1360px;
-//   background: #e7e7f2;
-// }

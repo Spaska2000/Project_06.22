@@ -20,7 +20,7 @@
     }
   }
 }
-.heder-main {
+.header-main {
   position: absolute;
   top: 0;
   width: 100%;
@@ -45,16 +45,57 @@
     gap: 6px;
   }
   &__row2 {
-    align-self: flex-end;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-direction: row;
+    align-self: flex-end;
     gap: 14px;
+  }
+}
+.lang-switcher {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+  &__item {
+    width: 33px;
+    height: 25px;
+    text-align: center;
+
+    border-radius: 8px;
+    border: 1px solid $colorMainReg;
+    &:hover {
+      background: $colorAccent;
+      border-color: $colorAccent;
+    }
+    &:last-child {
+      background: $colorAccent;
+      border-color: $colorAccent;
+    }
+  }
+  &__link {
+    @include mixins.fontStyle(12px, 700, 15px, 0em);
+    text-align: center;
+    color: $colorW;
+    font-family: $font;
   }
 }
 .page__link {
   @include mixins.fontStyle(16px, 700, 20px, 0em);
   text-align: right;
   color: $colorW;
+}
+.header-pages {
+  background: $colorW;
+}
+.text-pages {
+  color: $colorGreyText;
+}
+.color {
+  color: $colorActiv;
+  &:hover {
+    color: $colorAccent;
+    border-bottom: 2px solid $colorAccent;
+  }
 }

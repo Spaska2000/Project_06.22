@@ -29,34 +29,13 @@ p {
 .logo__hlegal__img {
   max-width: 100%;
 }
-.logo-page {
+.logo__page {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 44px;
   letter-spacing: 0;
   text-align: left;
-}
-
-.lang-switcher {
-  display: inline-flex;
-  gap: 6px;
-}
-.lang-switcher__item {
-  width: 33px;
-  height: 25px;
-  padding: 5px 7px;
-  border-radius: 8px;
-  border: 1px solid #323264;
-}
-.lang-switcher__link {
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #ffffff;
-  font-family: "Montserrat", sans-serif;
 }
 
 .adress {
@@ -98,7 +77,7 @@ p {
   text-align: left;
 }
 .link:hover {
-  stroke: #f0145a;
+  color: #f0145a;
 }
 
 svg {
@@ -106,6 +85,24 @@ svg {
 }
 svg:hover {
   stroke: #f0145a;
+}
+
+.link-circle {
+  color: #24a3ff;
+  border-style: none;
+}
+
+.svg-circle {
+  fill: #24a3ff;
+  fill-opacity: 0.2;
+}
+.svg-circle:hover {
+  fill: #24a3ff;
+  fill-opacity: 0.9;
+}
+.svg-circle:first-child {
+  fill: #24a3ff;
+  fill-opacity: 0.9;
 }
 
 .main__title {
@@ -131,7 +128,10 @@ svg:hover {
 }
 
 .switch {
-  background: #24a3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .header {
@@ -151,7 +151,7 @@ svg:hover {
   align-items: flex-start;
 }
 
-.heder-main {
+.header-main {
   position: absolute;
   top: 0;
   width: 100%;
@@ -177,12 +177,43 @@ svg:hover {
   gap: 6px;
 }
 .navigation__row2 {
-  align-self: flex-end;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-direction: row;
+  align-self: flex-end;
   gap: 14px;
+}
+
+.lang-switcher {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.lang-switcher__item {
+  width: 33px;
+  height: 25px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #323264;
+}
+.lang-switcher__item:hover {
+  background: #f0145a;
+  border-color: #f0145a;
+}
+.lang-switcher__item:last-child {
+  background: #f0145a;
+  border-color: #f0145a;
+}
+.lang-switcher__link {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
 }
 
 .page__link {
@@ -192,6 +223,22 @@ svg:hover {
   letter-spacing: 0em;
   text-align: right;
   color: #ffffff;
+}
+
+.header-pages {
+  background: #ffffff;
+}
+
+.text-pages {
+  color: #b3b3ba;
+}
+
+.color {
+  color: #006ccf;
+}
+.color:hover {
+  color: #f0145a;
+  border-bottom: 2px solid #f0145a;
 }
 
 .services__container {
@@ -255,7 +302,7 @@ svg:hover {
 }
 .team__container-two {
   padding: 60px;
-  margin: 60px auto;
+  margin: 60px auto 0;
 }
 .team__wrapper {
   display: flex;
@@ -614,12 +661,12 @@ svg:hover {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   height: 10px;
-  width: 1400px;
+  width: calc(100% - 40px);
   margin-bottom: -20px;
 }
 
 .shadow-small {
-  width: 1360px;
+  width: calc(100% - 80px);
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   height: 10px;

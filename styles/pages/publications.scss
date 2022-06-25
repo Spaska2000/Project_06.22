@@ -1,12 +1,11 @@
-@use "/styles/sections/base";
-@use "/styles/sections/base";
-@use "/styles/sections/elements";
-@use "/styles/sections/button";
-@use "/styles/sections/header";
-@use "/styles/sections/publications_block";
-@use "/styles/sections/footer";
-@use "/styles/sections/varaibles" as *;
-@use "/styles/sections/mixins";
+@use "./base";
+@use "./elements";
+@use "./button";
+@use "./header";
+@use "./publications_block";
+@use "./footer";
+@use "./varaibles" as *;
+@use "./mixins";
 .page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

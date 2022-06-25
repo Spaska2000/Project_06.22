@@ -11,29 +11,13 @@
   &__hlegal__img {
     max-width: 100%;
   }
-  &-page {
+  &__page {
     font-family: $font;
     @include mixins.fontStyle(36px, 400, 44px, 0);
     text-align: left;
   }
 }
-.lang-switcher {
-  display: inline-flex;
-  gap: 6px;
-  &__item {
-    width: 33px;
-    height: 25px;
-    padding: 5px 7px;
-    border-radius: 8px;
-    border: 1px solid $colorMainReg;
-  }
-  &__link {
-    @include mixins.fontStyle(12px, 700, 15px, 0em);
-    text-align: center;
-    color: $colorW;
-    font-family: $font;
-  }
-}
+
 .adress {
   @include mixins.fontStyle(16px, 400, 20px, 0em);
   text-align: right;
@@ -58,7 +42,7 @@
   text-align: left;
 
   &:hover {
-    stroke: $colorAccent;
+    color: $colorAccent;
   }
 }
 svg {
@@ -67,11 +51,23 @@ svg {
     stroke: $colorAccent;
   }
 }
-// &__main {
-//   @include mixins.fontStyle(14px, 700, 17px, 1px);
-//   text-align: left;
-// }
+.link-circle {
+  color: $colorActReg;
+  border-style: none;
+}
 
+.svg-circle {
+  fill: $colorActReg;
+  fill-opacity: 0.2;
+  &:hover {
+    fill: $colorActReg;
+    fill-opacity: 0.9;
+  }
+  &:first-child {
+    fill: $colorActReg;
+    fill-opacity: 0.9;
+  }
+}
 .main__title {
   @include mixins.fontStyle(38px, 700, 46px, 0em);
   text-align: left;
@@ -87,27 +83,8 @@ svg {
   text-align: left;
 }
 .switch {
-  background: $colorActReg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
-// .shadow__container {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-//   // max-width: 100%;
-//   // margin: 0 auto;
-
-//   // margin-bottom: -80px;
-// }
-// .shadow {
-//   background: #cacadb;
-//   border-bottom-left-radius: 12px;
-//   border-bottom-right-radius: 12px;
-//   height: 10px;
-//   width: 1400px;
-// }
-
-// .shadow:last-of-type {
-//   width: 1360px;
-//   background: #e7e7f2;
-// }

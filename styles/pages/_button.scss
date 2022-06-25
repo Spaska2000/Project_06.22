@@ -18,12 +18,11 @@
   &__double {
     background: $colorSepar;
     border: 1px solid $colorSepar;
-    position: relative;
     width: 233px;
     height: 42px;
     padding-right: 32px;
     margin-left: auto;
-    :hover {
+    &:hover {
       background: $colorW;
     }
   }
@@ -34,10 +33,9 @@
     width: 105px;
     height: 38px;
     border-radius: 10px;
-    position: absolute;
     top: 0;
     left: 0;
-    :hover {
+    &:hover {
       background: $colorW;
     }
   }
