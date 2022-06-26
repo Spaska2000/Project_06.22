@@ -13,3 +13,13 @@
   gap: 30px;
   padding: 20px 0;
 }
+.publications__card {
+  &:last-child {
+    padding-top: 30px;
+  }
+}
+.publications {
+  .button {
+    margin: 0 auto 10px auto;
+  }
+}

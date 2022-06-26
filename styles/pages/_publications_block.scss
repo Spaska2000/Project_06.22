@@ -1,3 +1,7 @@
+@use "./base";
+@use "./button";
+@use "./elements";
+@use "./footer";
 @use "./varaibles" as *;
 @use "./mixins";
 .publications {
@@ -18,7 +22,7 @@
     align-items: flex-start;
     gap: 10px;
     padding: 30px 60px;
-    border-bottom: 2px solid $colorSepar;
+    // border-bottom: 2px solid $colorSepar;
   }
 
   &__wrapper-card {
@@ -36,6 +40,7 @@
     gap: 15px;
     max-width: 100%;
     font-family: $font;
+    background: $colorW;
   }
   &__card-img {
     max-width: 100%;

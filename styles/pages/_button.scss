@@ -5,7 +5,7 @@
 .button {
   width: 211px;
   height: 56px;
-  padding: 18px 30px;
+  padding-top: 17px;
   border-radius: 12px;
   border: 1px solid $colorActReg;
   @include mixins.fontStyle(16px, 700, 20px, 0em);
@@ -14,23 +14,22 @@
   background: $colorActReg;
   color: $colorW;
   margin: 30px 0;
-
-  &__double {
-    background: $colorSepar;
-    border: 1px solid $colorSepar;
-    width: 233px;
-    height: 42px;
-    padding-right: 32px;
-    margin-left: auto;
-    &:hover {
-      background: $colorW;
-    }
+  &__main {
+    border: none;
+    @include mixins.fontStyle(16px, 700, 20px, 0em);
+    font-family: $font;
+    text-align: center;
+    background: $colorActReg;
+    color: $colorW;
   }
-  &__double-news {
-    outline: 2px solid $colorSepar;
+  &__news {
+    border: 1px solid $colorSepar;
+    @include mixins.fontStyle(16px, 700, 20px, 0em);
+    font-family: $font;
+    text-align: center;
     background: $colorSepar;
     color: $colorMainReg;
-    width: 105px;
+    width: 120px;
     height: 38px;
     border-radius: 10px;
     top: 0;
@@ -38,5 +37,26 @@
     &:hover {
       background: $colorW;
     }
+    &:first-child {
+      background: $colorW;
+    }
   }
+}
+.button__double {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: row;
+  background: $colorSepar;
+  border: 1px solid $colorSepar;
+  width: 231px;
+  height: 40px;
+  gap: 2px;
+  padding: 0;
+
+  // padding-right: 32px;
+  // margin-left: auto;
+  // &:hover {
+  //   background: $colorW;
+  // }
 }

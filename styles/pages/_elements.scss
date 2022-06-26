@@ -6,7 +6,8 @@
   max-width: 130px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 4px;
 
   &__hlegal__img {
     max-width: 100%;
@@ -16,6 +17,9 @@
     @include mixins.fontStyle(36px, 400, 44px, 0);
     text-align: left;
   }
+}
+.hlegal-pages {
+  color: $colorMainReg;
 }
 
 .adress {
@@ -45,7 +49,7 @@
     color: $colorAccent;
   }
 }
-svg {
+.svg-link {
   stroke: $colorActReg;
   &:hover {
     stroke: $colorAccent;
@@ -54,6 +58,13 @@ svg {
 .link-circle {
   color: $colorActReg;
   border-style: none;
+
+  &:first-child {
+    .svg-circle {
+      fill: $colorActReg;
+      fill-opacity: 0.9;
+    }
+  }
 }
 
 .svg-circle {
@@ -63,11 +74,12 @@ svg {
     fill: $colorActReg;
     fill-opacity: 0.9;
   }
-  &:first-child {
-    fill: $colorActReg;
-    fill-opacity: 0.9;
-  }
 }
+
+.facebook {
+  fill: $colorW;
+}
+
 .main__title {
   @include mixins.fontStyle(38px, 700, 46px, 0em);
   text-align: left;
@@ -87,4 +99,7 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 15px;
+}
+.text-pages {
+  color: $colorGreyText;
 }
