@@ -115,13 +115,19 @@ p {
 }
 
 .main__title {
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
   letter-spacing: 0em;
-  text-align: left;
-  color: #f0145a;
-  font-family: "Montserrat", sans-serif;
+  color: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  background-clip: text;
+  -webkit-text-emphasis-color: transparent;
+          text-emphasis-color: transparent;
+  background: -webkit-linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main__link {
@@ -272,7 +278,7 @@ p {
   height: 25px;
   text-align: center;
   border-radius: 8px;
-  border: 1px solid #323264;
+  border: 1px solid transparent;
 }
 .lang-switcher__item:hover {
   background: #f0145a;

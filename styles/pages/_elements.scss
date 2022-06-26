@@ -81,10 +81,14 @@
 }
 
 .main__title {
-  @include mixins.fontStyle(38px, 700, 46px, 0em);
   text-align: left;
-  color: #f0145a;
   font-family: $font;
+  @include mixins.fontTitle(38px, 700, 46px, 0em, $colorGradText);
+  background-clip: text;
+  text-emphasis-color: transparent;
+  background: -webkit-linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .main__link {
   display: flex;
