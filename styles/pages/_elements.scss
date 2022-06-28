@@ -107,6 +107,16 @@
 .text-pages {
   color: $colorGreyText;
 }
+@media screen and (max-width: 768px) {
+  .logo {
+    // max-width: 130px;
+    // display: flex;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    // gap: 4px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .main__title {
     @include mixins.fontTitle(30px, 700, 36px, 0em, $colorGradText);
