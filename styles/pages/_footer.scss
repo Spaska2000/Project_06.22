@@ -18,6 +18,7 @@
   &__adress {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 21px;
     column-gap: 10px;
@@ -32,7 +33,6 @@
   }
   &__logo-last {
     margin-left: auto;
-    // align-self: flex-end;
   }
   &__phone {
     color: $colorMainAlt;
@@ -44,6 +44,10 @@
     // // flex-direction: column;
     margin-top: 0px;
   }
+  .footer__logo-invisible {
+    display: none;
+    text-align: center;
+  }
 }
 .facebook-blue {
   color: $colorActiv;
@@ -52,4 +56,62 @@
   @include mixins.fontStyle(16px, 700, 20px, 0em);
   text-align: left;
   color: $colorActReg;
+}
+@media screen and (max-width: 768px) {
+  .publications-page {
+    .footer {
+      &__adress {
+        justify-content: center;
+      }
+      &__logo-last {
+        display: none;
+        align-self: center;
+      }
+    }
+    .footer__logo-invisible {
+      display: block;
+      margin-top: 28px;
+
+      .footer__logo {
+        @include mixins.fontStyle(16px, 400, 20px, 0px);
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .footer {
+    &__container {
+      padding: 0 30px;
+    }
+    &__adress {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    .dot {
+      display: none;
+    }
+
+    &__logo {
+      text-align: center;
+    }
+    &__logo-last {
+      margin: 0 auto;
+      display: none;
+    }
+
+    &__contact {
+      margin-top: 20px;
+    }
+
+    .mail {
+    }
+    .footer__logo-invisible {
+      display: block;
+      margin-top: 10px;
+    }
+  }
 }
