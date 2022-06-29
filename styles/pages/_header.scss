@@ -299,96 +299,101 @@
           background: $colorSepar;
           border: 1px solid $colorSepar;
         }
+        #menu {
+          width: 0;
+          height: 0;
+          visibility: hidden;
+        }
+
+        .burger-menu {
+          // display: block;
+          // position: fixed;
+          top: 57px;
+          right: 0;
+          max-width: 100%;
+          background: $colorW;
+          padding: 19px 12px 12px 12px;
+          border-radius: 8px;
+          border: 1px solid transparent;
+          width: 359px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          // gap: 15px;
+          position: fixed;
+          height: 100%;
+          overflow-y: hidden;
+          // transform: translateX(-100%);
+          // transition: transform 0.5s;
+          z-index: 2;
+          display: none;
+          // #menu {
+          //   width: 0;
+          //   height: 0;
+          //   visibility: hidden;
+        }
+        #menu:checked + label {
+          &::after {
+            opacity: 1;
+            display: block;
+          }
+        }
+        .activ {
+          margin-left: auto;
+          // align-self: flex-end;
+          // position: absolute;
+          // top: 0;
+          // right: 0;
+        }
+        .burger-navigation {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+        .burger-navigation-button {
+          width: 335px;
+          height: 43px;
+          background: $colorGrey;
+          border-radius: 12px;
+          border: 1px solid transparent;
+          color: $colorActReg;
+          @include mixins.fontStyle(24px, 700, 29px, 0em);
+          text-align: center;
+          padding: 7px 0;
+          &:focus {
+            background: $colorSepar;
+          }
+          &:nth-of-type(4) {
+            color: $colorAccent;
+          }
+        }
+        .burger__link {
+          color: $colorActReg;
+          @include mixins.fontStyle(24px, 700, 29px, 0em);
+          text-align: center;
+          &:nth-child(4) {
+            color: $colorAccent;
+          }
+        }
+        .navigation {
+          display: none;
+        }
+
+        .navigation__row2 {
+          display: none;
+        }
       }
-      .burger {
-        cursor: pointer;
-        z-index: 1;
-        // &:hover {
-        //   background: $colorSepar;
-        //   border: 1px solid $colorSepar;
-        // }
-      }
-    }
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .navigation__row2 {
-    display: none;
-  }
-  // #label {
-  //   display: none;
-  // }
-  .burger-menu {
-    // display: block;
-    // visibility: hidden;
-
-    // position: fixed;
-    top: 57px;
-    right: 0;
-    max-width: 100%;
-    background: $colorW;
-    padding: 19px 12px 12px 12px;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    width: 359px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // gap: 15px;
-    position: fixed;
-
-    height: 100%;
-    overflow-y: hidden;
-    // transform: translateX(-100%);
-    // transition: transform 0.5s;
-    z-index: 2;
-    display: none;
-    #menu:checked ~ .burger-menu {
-      display: block;
-    }
-  }
-
-  .activ {
-    margin-left: auto;
-    // align-self: flex-end;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-  }
-  .burger-navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-  }
-  .burger-navigation-button {
-    width: 335px;
-    height: 43px;
-    background: $colorGrey;
-    border-radius: 12px;
-    border: 1px solid transparent;
-    color: $colorActReg;
-    @include mixins.fontStyle(24px, 700, 29px, 0em);
-    text-align: center;
-    padding: 7px 0;
-    &:focus {
-      background: $colorSepar;
-    }
-    &:nth-of-type(4) {
-      color: $colorAccent;
-    }
-  }
-  .burger__link {
-    color: $colorActReg;
-    @include mixins.fontStyle(24px, 700, 29px, 0em);
-    text-align: center;
-    &:nth-child(4) {
-      color: $colorAccent;
+      // .burger {
+      //   cursor: pointer;
+      //   z-index: 1;
+      //   // &:hover {
+      //   //   background: $colorSepar;
+      //   //   border: 1px solid $colorSepar;
+      //   // }
+      // }
     }
   }
 }

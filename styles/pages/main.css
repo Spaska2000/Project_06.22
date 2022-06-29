@@ -443,20 +443,12 @@ p {
     background: #e6e6f0;
     border: 1px solid #e6e6f0;
   }
-  .header-pages .header__container .burger {
-    cursor: pointer;
-    z-index: 1;
+  .header-pages .header__container .button-burger #menu {
+    width: 0;
+    height: 0;
+    visibility: hidden;
   }
-
-  .navigation {
-    display: none;
-  }
-
-  .navigation__row2 {
-    display: none;
-  }
-
-  .burger-menu {
+  .header-pages .header__container .button-burger .burger-menu {
     top: 57px;
     right: 0;
     max-width: 100%;
@@ -475,23 +467,21 @@ p {
     z-index: 2;
     display: none;
   }
-  .burger-menu #menu:checked ~ .burger-menu {
+  .header-pages .header__container .button-burger #menu:checked + label::after {
+    opacity: 1;
     display: block;
   }
-
-  .activ {
+  .header-pages .header__container .button-burger .activ {
     margin-left: auto;
   }
-
-  .burger-navigation {
+  .header-pages .header__container .button-burger .burger-navigation {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
   }
-
-  .burger-navigation-button {
+  .header-pages .header__container .button-burger .burger-navigation-button {
     width: 335px;
     height: 43px;
     background: #f5f5fa;
@@ -505,14 +495,13 @@ p {
     text-align: center;
     padding: 7px 0;
   }
-  .burger-navigation-button:focus {
+  .header-pages .header__container .button-burger .burger-navigation-button:focus {
     background: #e6e6f0;
   }
-  .burger-navigation-button:nth-of-type(4) {
+  .header-pages .header__container .button-burger .burger-navigation-button:nth-of-type(4) {
     color: #f0145a;
   }
-
-  .burger__link {
+  .header-pages .header__container .button-burger .burger__link {
     color: #24a3ff;
     font-size: 24px;
     font-weight: 700;
@@ -520,8 +509,14 @@ p {
     letter-spacing: 0em;
     text-align: center;
   }
-  .burger__link:nth-child(4) {
+  .header-pages .header__container .button-burger .burger__link:nth-child(4) {
     color: #f0145a;
+  }
+  .header-pages .header__container .button-burger .navigation {
+    display: none;
+  }
+  .header-pages .header__container .button-burger .navigation__row2 {
+    display: none;
   }
 }
 .services__container {
