@@ -16,6 +16,7 @@
     font-family: $font;
     @include mixins.fontStyle(36px, 400, 44px, 0);
     text-align: left;
+    display: block;
   }
 }
 .hlegal-pages {
