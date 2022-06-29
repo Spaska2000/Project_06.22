@@ -20,44 +20,73 @@
     <header>
       <div class="header-pages">
         <div class="header__container">
-          <div class="wrapper__navigation-small">
-            <ul class="lang-switcher">
-              <li class="lang-switcher__item item-pages">
-                <a href="./" class="lang-switcher__link text-pages">УК</a>
-              </li>
-              <li class="lang-switcher__item item-pages">
-                <a href="./" class="lang-switcher__link text-pages">РУ</a>
-              </li>
-              <li class="lang-switcher__item item-pages">
-                <a href="./" class="lang-switcher__link text-pages">EN</a>
-              </li>
-            </ul>
-            <div class="phone-main">
-              <a href="tel:0800211927" class="phone text-pages">0800 211 927</a>
-             </div>
-          </div>
-          <div class="wrapper-logo-nav">
-            <div class="logo logo-nav logo-small">
-              <a href="./" class="logo__hlegal hlegal-pages">
-                <img src="./pictures/hlegal navy low.png" class="logo__hlegal-img" />
-              </a>
-              <a href="./" class="logo__slash">
-                <img src="./pictures/Slash.png" class="logo__slash-img" />
-              </a>
-              <p class="logo__page title-pages">publications</p>
-             
+          <div class="header__container-small">
+            <div class="wrapper__navigation-small">
+              <ul class="lang-switcher">
+                <li class="lang-switcher__item item-pages">
+                  <a href="./" class="lang-switcher__link text-pages">УК</a>
+                </li>
+                <li class="lang-switcher__item item-pages">
+                  <a href="./" class="lang-switcher__link text-pages">РУ</a>
+                </li>
+                <li class="lang-switcher__item item-pages">
+                  <a href="./" class="lang-switcher__link text-pages">EN</a>
+                </li>
+              </ul>
+              <div class="phone-main">
+                <a href="tel:0800211927" class="phone text-pages">0800 211 927</a>
+              </div>
             </div>
-            <div class="button-burger">
-              <a href="./" class="burger">
-                <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 10.5H25" stroke="#323264" stroke-width="2"/>
-                  <path d="M7 16.5H25" stroke="#323264" stroke-width="2"/>
-                  <path d="M7 22.5H25" stroke="#323264" stroke-width="2"/>
-                </svg>
-              </a>
-            </div>
-            <div class="burger-menu">
+            <div class="wrapper-logo-nav">
+              <div class="logo logo-nav logo-small">
+                <a href="./" class="logo__hlegal hlegal-pages">
+                  <img src="./pictures/hlegal navy low.png" class="logo__hlegal-img" />
+                </a>
+                <a href="./" class="logo__slash">
+                  <img src="./pictures/Slash.png" class="logo__slash-img" />
+                </a>
+                <p class="logo__page title-pages">publications</p>
               
+              </div>
+              <div class="button-burger">
+                <input type="checkbox" id="menu">
+                <label  for="menu">
+                  <div class="burger">
+                    <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 10.5H25" stroke="#323264" stroke-width="2"/>
+                      <path d="M7 16.5H25" stroke="#323264" stroke-width="2"/>
+                      <path d="M7 22.5H25" stroke="#323264" stroke-width="2"/>
+                    </svg>
+                  </div>
+              </label>
+              </div>
+              <div class="burger-menu">
+                <div class="activ">
+                  <a href="./" class="burger-activ-link" target="_blank">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 7L25 25" stroke="#EC6F5D" stroke-width="2"/>
+                      <path d="M25 7L7 25" stroke="#EC6F5D" stroke-width="2"/>
+                      </svg>
+                  </a>
+                </div>
+                <div class="burger-navigation">
+                  <div class="burger-navigation-button">
+                    <a href="./" class="burger__link" target="_blank">about us</a>
+                  </div>
+                  <div class="burger-navigation-button">
+                    <a href="./" class="burger__link" target="_blank">services</a>
+                  </div>
+                  <div class="burger-navigation-button">
+                    <a href="./" class="burger__link" target="_blank">team</a>
+                  </div>
+                  <div class="burger-navigation-button">
+                    <a href="./" class="burger__link" target="_blank">publications</a>
+                  </div>
+                  <div class="burger-navigation-button">
+                    <a href="./" class="burger__link" target="_blank">contact</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="header__container__wrapper">
@@ -135,7 +164,7 @@
             <button class="button__news">articles</button>
           </div>
           <div class="publications__wrapper-card page">
-            <div class="publications__card">
+            <div class="publications__card page-card">
               <div class="publications__card-img">
                 <img
                   src="./pictures/pub 1.jpg"
@@ -154,7 +183,7 @@
                 </p>
               </div>
             </div>
-            <div class="publications__card">
+            <div class="publications__card page-card">
               <div class="publications__card-img">
                 <img
                   src="./pictures/pub 2.jpg"
@@ -177,7 +206,7 @@
                 </p>
               </div>
             </div>
-            <div class="publications__card">
+            <div class="publications__card page-card">
               <div class="publications__card-img">
                 <img
                   src="./pictures/pub 3.jpg"
@@ -197,7 +226,7 @@
                 </p>
               </div>
             </div>
-            <div class="publications__card">
+            <div class="publications__card page-card">
                 <div class="publications__card-img">
                   <img
                     src="./pictures/pub 4.jpg"
@@ -215,7 +244,7 @@
                   </p>
                 </div>
               </div>
-              <div class="publications__card">
+              <div class="publications__card page-card">
                 <div class="publications__card-img">
                   <img
                     src="./pictures/pub 5.jpg"
@@ -233,7 +262,7 @@
                   </p>
                 </div>
               </div>
-              <div class="publications__card">
+              <div class="publications__card page-card">
                 <div class="publications__card-block">
                   <h3 class="publications__card-title">Currency control is dead, long live currency control!</h3>
                   <p class="publications__card-dat">JUNE 14, 2018</p>
