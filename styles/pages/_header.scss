@@ -4,7 +4,7 @@
 @use "./mixins";
 
 .header {
-  background: $colorMainReg;
+  background: transparent;
 
   &__container {
     min-height: 144px;
@@ -93,6 +93,7 @@
     text-align: center;
     border-radius: 8px;
     border: 1px solid transparent;
+
     &:hover {
       background: $colorAccent;
       border-color: $colorAccent;
@@ -143,6 +144,7 @@
     border-bottom: 2px solid $colorAccent;
   }
 }
+
 @media screen and (max-width: 768px) {
   .header__container__wrapper {
     padding: 50px 60px 60px 60px;
@@ -192,177 +194,198 @@
   }
 }
 @media screen and (max-width: 575px) {
-  .header-pages {
-    .header__container {
-      min-height: 102px;
+  .header__container {
+    min-height: 102px;
 
-      &__wrapper {
-        display: none;
-      }
-      .header__container-small {
+    &__wrapper {
+      display: none;
+    }
+    .header__container-small {
+      display: block;
+      position: fixed;
+      margin: 0 auto;
+      width: 100%;
+      max-height: 100%;
+    }
+    .wrapper__navigation-small {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      padding: 12px 15px 0 15px;
+
+      background: $colorGrey;
+      height: 57px;
+    }
+    .logo-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-self: flex-start;
+    }
+    .logo-small {
+      height: 32px;
+    }
+    .wrapper-logo-nav {
+      background: $colorW;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+
+      top: 57px;
+      left: 0;
+      z-index: 50;
+      .logo__page {
         display: block;
-        position: fixed;
-        margin: 0 auto;
-        width: 100%;
-        max-height: 100%;
-      }
-      .wrapper__navigation-small {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        padding: 12px 15px 0 15px;
-
-        background: $colorGrey;
-        height: 57px;
-      }
-      .logo-nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        font-size: 20px;
+        line-height: 24px;
+        height: 26px;
+        text-align: center;
         align-self: flex-start;
       }
-      .logo-small {
-        height: 32px;
+      .logo__hlegal {
+        width: 80%;
       }
-      .wrapper-logo-nav {
-        background: $colorW;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+      .logo__slash {
+        width: 100%;
         align-items: center;
-        padding: 15px;
+      }
+      .logo__hlegal-img {
+        max-width: 70px;
+      }
+      .logo__slash-img {
+        height: 26px;
+      }
+    }
+    .button-burger {
+      display: block;
 
-        top: 57px;
-        left: 0;
-        z-index: 50;
-        .logo__page {
+      background: transparent;
+      border: 1px solid transparent;
+
+      width: 32px;
+      height: 32px;
+      align-self: center;
+      margin-left: auto;
+
+      &:hover {
+        background: $colorSepar;
+        border: 1px solid $colorSepar;
+        .burger-menu {
           display: block;
-          font-size: 20px;
-          line-height: 24px;
-          height: 26px;
-          text-align: center;
-          align-self: flex-start;
-        }
-        .logo__hlegal {
-          width: 80%;
-        }
-        .logo__slash {
-          width: 100%;
-          align-items: center;
-        }
-        .logo__hlegal-img {
-          max-width: 70px;
-        }
-        .logo__slash-img {
-          height: 26px;
         }
       }
-      .button-burger {
+      .burger-white {
         display: block;
 
-        background: transparent;
-        border: 1px solid transparent;
-
-        width: 32px;
-        height: 32px;
-        align-self: center;
+        align-self: flex-end;
         margin-left: auto;
+      }
+      #menu {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+      }
 
-        &:hover {
-          background: $colorSepar;
-          border: 1px solid $colorSepar;
-          .burger-menu {
-            display: block;
-          }
+      .burger-menu {
+        top: 57px;
+        right: 0;
+        max-width: 100%;
+        background: $colorW;
+        padding: 19px 12px 12px 12px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        width: 359px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        height: 351px;
+        overflow-y: hidden;
+
+        z-index: 2;
+        display: none;
+
+        #menu:checked + label > div {
+          display: block;
         }
 
-        #menu {
-          width: 0;
-          height: 0;
-          visibility: hidden;
-        }
-
-        .burger-menu {
-          top: 57px;
-          right: 0;
-          max-width: 100%;
-          background: $colorW;
-          padding: 19px 12px 12px 12px;
-          border-radius: 8px;
-          border: 1px solid transparent;
-          width: 359px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-
+        .active-cross {
+          margin-left: auto;
           position: fixed;
-          height: 351px;
-          overflow-y: hidden;
+          top: 76px;
+          right: 19px;
 
-          z-index: 2;
-          display: none;
-
-          #menu:checked + label > div {
-            display: block;
-          }
-
-          .active-cross {
-            margin-left: auto;
-            position: fixed;
-            top: 76px;
-            right: 19px;
-
-            &:hover {
-              background: $colorW;
-              .burger-menu {
-                display: none;
-              }
+          &:hover {
+            background: $colorW;
+            .burger-menu {
+              display: none;
             }
           }
         }
-        .burger-navigation {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 15px;
+      }
+      .burger-navigation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+      .burger-navigation-button {
+        width: 335px;
+        height: 43px;
+        background: $colorGrey;
+        border-radius: 12px;
+        border: 1px solid transparent;
+        color: $colorActReg;
+        @include mixins.fontStyle(24px, 700, 29px, 0em);
+        text-align: center;
+        padding: 7px 0;
+        &:first-of-type {
+          margin-top: 37px;
         }
-        .burger-navigation-button {
-          width: 335px;
-          height: 43px;
-          background: $colorGrey;
-          border-radius: 12px;
-          border: 1px solid transparent;
-          color: $colorActReg;
-          @include mixins.fontStyle(24px, 700, 29px, 0em);
-          text-align: center;
-          padding: 7px 0;
-          &:first-of-type {
-            margin-top: 37px;
-          }
-          &:hover {
-            background: $colorSepar;
-          }
+        &:hover {
+          background: $colorSepar;
         }
-        .burger__link {
-          color: $colorActReg;
-          @include mixins.fontStyle(24px, 700, 29px, 0em);
-          text-align: center;
-        }
+      }
+      .burger__link {
+        color: $colorActReg;
+        @include mixins.fontStyle(24px, 700, 29px, 0em);
+        text-align: center;
+      }
 
-        .publ-link {
-          color: $colorAccent;
-        }
+      .publ-link {
+        color: $colorAccent;
+      }
 
-        .navigation {
-          display: none;
-        }
+      .navigation {
+        display: none;
+      }
 
-        .navigation__row2 {
-          display: none;
-        }
+      .navigation__row2 {
+        display: none;
+      }
+    }
+  }
+  .header {
+    .header__container.header-main {
+      .navigation-small-main {
+        background: rgba(245, 245, 250, 0.2);
+      }
+
+      .wrapper-logo-main {
+        background: transparent;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .phone-white {
+        color: $colorW;
       }
     }
   }
