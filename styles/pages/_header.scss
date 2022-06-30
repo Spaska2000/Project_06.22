@@ -35,12 +35,11 @@
 .wrapper__navigation-small {
   display: none;
 }
-// .wrapper__logo-nav {
-//   display: none;
+
 .logo-nav {
   display: none;
 }
-// }
+
 .button-burger {
   display: none;
 }
@@ -161,31 +160,23 @@
     display: none;
   }
   .navigation {
-    // display: flex;
     justify-content: flex-start;
-    // align-items: center;
-    // flex-direction: column;
+
     row-gap: 30px;
 
     &__row {
-      // display: flex;
       justify-content: flex-start;
-      //   align-items: center;
-      //   flex-direction: row;
+
       align-self: flex-start;
-      //   gap: 6px;
     }
-    // .wrapper__logo-nav {
-    //   display: block;
-    //   // background: $colorGrey;
-    //   padding: 30px 0;
+
     .logo-nav {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
       align-self: flex-start;
     }
-    // }
+
     &__row-two {
       display: flex;
       justify-content: flex-start;
@@ -194,33 +185,19 @@
       align-self: flex-start;
     }
     &__row2 {
-      // display: flex;
       justify-content: flex-start;
-      // align-items: center;
-      // flex-direction: row;
+
       align-self: flex-start;
-      // gap: 14px;
     }
   }
 }
 @media screen and (max-width: 575px) {
-  // .publications-page {
-  //   .logo {
-  //     &:first-child {
-  //       display: none;
-  //     }
-  //   }
   .header-pages {
     .header__container {
       min-height: 102px;
 
       &__wrapper {
         display: none;
-        // padding: 10px 15px 0 15px;
-        // color: $colorGrey;
-        // // display: flex;
-        // flex-direction: column;
-        // justify-content: flex-start;
       }
       .header__container-small {
         display: block;
@@ -235,8 +212,7 @@
         align-items: center;
         flex-direction: row;
         padding: 12px 15px 0 15px;
-        // align-self: flex-start;
-        // gap: 14px;
+
         background: $colorGrey;
         height: 57px;
       }
@@ -284,21 +260,23 @@
       }
       .button-burger {
         display: block;
-        // // margin-right: auto;
-        // flex-direction: row;
+
         background: transparent;
         border: 1px solid transparent;
-        // justify-content: flex-end;
-        // align-items: center;
-        // align-self: flex-end;
+
         width: 32px;
         height: 32px;
         align-self: center;
         margin-left: auto;
+
         &:hover {
           background: $colorSepar;
           border: 1px solid $colorSepar;
+          .burger-menu {
+            display: block;
+          }
         }
+
         #menu {
           width: 0;
           height: 0;
@@ -306,8 +284,6 @@
         }
 
         .burger-menu {
-          // display: block;
-          // position: fixed;
           top: 57px;
           right: 0;
           max-width: 100%;
@@ -320,31 +296,31 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          // gap: 15px;
+
           position: fixed;
-          height: 100%;
+          height: 351px;
           overflow-y: hidden;
-          // transform: translateX(-100%);
-          // transition: transform 0.5s;
+
           z-index: 2;
           display: none;
-          // #menu {
-          //   width: 0;
-          //   height: 0;
-          //   visibility: hidden;
-        }
-        #menu:checked + label {
-          &::after {
-            opacity: 1;
+
+          #menu:checked + label > div {
             display: block;
           }
-        }
-        .activ {
-          margin-left: auto;
-          // align-self: flex-end;
-          // position: absolute;
-          // top: 0;
-          // right: 0;
+
+          .active-cross {
+            margin-left: auto;
+            position: fixed;
+            top: 76px;
+            right: 19px;
+
+            &:hover {
+              background: $colorW;
+              .burger-menu {
+                display: none;
+              }
+            }
+          }
         }
         .burger-navigation {
           display: flex;
@@ -363,21 +339,23 @@
           @include mixins.fontStyle(24px, 700, 29px, 0em);
           text-align: center;
           padding: 7px 0;
-          &:focus {
-            background: $colorSepar;
+          &:first-of-type {
+            margin-top: 37px;
           }
-          &:nth-of-type(4) {
-            color: $colorAccent;
+          &:hover {
+            background: $colorSepar;
           }
         }
         .burger__link {
           color: $colorActReg;
           @include mixins.fontStyle(24px, 700, 29px, 0em);
           text-align: center;
-          &:nth-child(4) {
-            color: $colorAccent;
-          }
         }
+
+        .publ-link {
+          color: $colorAccent;
+        }
+
         .navigation {
           display: none;
         }
@@ -386,14 +364,6 @@
           display: none;
         }
       }
-      // .burger {
-      //   cursor: pointer;
-      //   z-index: 1;
-      //   // &:hover {
-      //   //   background: $colorSepar;
-      //   //   border: 1px solid $colorSepar;
-      //   // }
-      // }
     }
   }
 }

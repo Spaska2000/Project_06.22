@@ -443,6 +443,9 @@ p {
     background: #e6e6f0;
     border: 1px solid #e6e6f0;
   }
+  .header-pages .header__container .button-burger:hover .burger-menu {
+    display: block;
+  }
   .header-pages .header__container .button-burger #menu {
     width: 0;
     height: 0;
@@ -462,17 +465,25 @@ p {
     justify-content: center;
     align-items: center;
     position: fixed;
-    height: 100%;
+    height: 351px;
     overflow-y: hidden;
     z-index: 2;
     display: none;
   }
-  .header-pages .header__container .button-burger #menu:checked + label::after {
-    opacity: 1;
+  .header-pages .header__container .button-burger .burger-menu #menu:checked + label > div {
     display: block;
   }
-  .header-pages .header__container .button-burger .activ {
+  .header-pages .header__container .button-burger .burger-menu .active-cross {
     margin-left: auto;
+    position: fixed;
+    top: 76px;
+    right: 19px;
+  }
+  .header-pages .header__container .button-burger .burger-menu .active-cross:hover {
+    background: #ffffff;
+  }
+  .header-pages .header__container .button-burger .burger-menu .active-cross:hover .burger-menu {
+    display: none;
   }
   .header-pages .header__container .button-burger .burger-navigation {
     display: flex;
@@ -495,11 +506,11 @@ p {
     text-align: center;
     padding: 7px 0;
   }
-  .header-pages .header__container .button-burger .burger-navigation-button:focus {
-    background: #e6e6f0;
+  .header-pages .header__container .button-burger .burger-navigation-button:first-of-type {
+    margin-top: 37px;
   }
-  .header-pages .header__container .button-burger .burger-navigation-button:nth-of-type(4) {
-    color: #f0145a;
+  .header-pages .header__container .button-burger .burger-navigation-button:hover {
+    background: #e6e6f0;
   }
   .header-pages .header__container .button-burger .burger__link {
     color: #24a3ff;
@@ -509,7 +520,7 @@ p {
     letter-spacing: 0em;
     text-align: center;
   }
-  .header-pages .header__container .button-burger .burger__link:nth-child(4) {
+  .header-pages .header__container .button-burger .publ-link {
     color: #f0145a;
   }
   .header-pages .header__container .button-burger .navigation {
